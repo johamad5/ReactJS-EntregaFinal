@@ -1,0 +1,8 @@
+.itemList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+  width: 100vw;
+}

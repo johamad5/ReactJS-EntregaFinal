@@ -1,0 +1,19 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(90deg, #ffffff, #e7bf9dd0);
+}
+
+nav a {
+  background-color: transparent;
+  color: #212529;
+  text-decoration: none;
+  border: none;
+}
+
+nav a:hover {
+  text-decoration: overline;
+
+  font-weight: bold;
+}
