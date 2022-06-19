@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./itemListContainer.css";
 import { getProducts, getProductsByCategory } from "../productCatalog";
@@ -42,7 +42,7 @@ const ItemListContainer = () => {
   }
 
   return (
-    <Fragment>
+    <>
       <h1>Ricco pasteleria.</h1>
 
       {products.length > 0 ? (
@@ -50,7 +50,7 @@ const ItemListContainer = () => {
       ) : (
         <h3>No tenemos productos disponibles por el momento :/</h3>
       )}
-    </Fragment>
+    </>
   );
 };
 

@@ -8,6 +8,7 @@ const products = [
     img: "./img/productImages/alfajorMaicena.jpg",
     unidades: "1",
     precio: 35,
+    stock: 100,
   },
   {
     id: "A2",
@@ -18,6 +19,7 @@ const products = [
     img: "./img/productImages/alfajorSalchichon.jpg",
     unidades: "1",
     precio: 45,
+    stock: 100,
   },
   {
     id: "T1",
@@ -28,6 +30,7 @@ const products = [
     img: "./img/productImages/carrotCake.jpg",
     unidades: "1",
     precio: 650,
+    stock: 6,
   },
   {
     id: "T2",
@@ -38,6 +41,7 @@ const products = [
     img: "./img/productImages/lemonPie.jpg",
     unidades: "1",
     precio: 720,
+    stock: 6,
   },
   {
     id: "T3",
@@ -48,6 +52,7 @@ const products = [
     img: "./img/productImages/tartaFrutal.jpg",
     unidades: "1",
     precio: 720,
+    stock: 6,
   },
   {
     id: "T4",
@@ -58,6 +63,7 @@ const products = [
     img: "./img/productImages/tortaBrownie.jpeg",
     unidades: "1",
     precio: 590,
+    stock: 10,
   },
   {
     id: "V1",
@@ -68,6 +74,7 @@ const products = [
     img: "./img/productImages/budinDeNaranja.jpeg",
     unidades: "1",
     precio: 190,
+    stock: 20,
   },
 ];
 

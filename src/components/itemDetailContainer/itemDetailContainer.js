@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getProductsById } from "../productCatalog";
 import ItemDetail from "../itemDetail/itemDetail";
@@ -14,9 +14,9 @@ const ItemDetailContainer = () => {
   }, []);
 
   return (
-    <Fragment>
+    <>
       <ItemDetail {...product} />
-    </Fragment>
+    </>
   );
 };
 
