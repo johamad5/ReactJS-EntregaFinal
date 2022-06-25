@@ -1,14 +1,14 @@
-button {
+.btnCC {
   padding: 0.5rem 1rem;
   background-color: #e7bf9dd0;
   color: whitesmoke;
   border: none;
   font-style: italic;
   border-radius: 0.5rem;
+  margin-left: 10px;
 }
 
-button:hover {
+.btnCC:hover {
   background-color: #e7c09d;
-  font-weight: 600;
   box-shadow: 2px 2px 4px #e7bf9dd0;
 }

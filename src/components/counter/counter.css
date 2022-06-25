@@ -1,14 +1,20 @@
-button {
-  padding: 0.5rem 1rem;
-  background-color: #e7bf9dd0;
-  color: whitesmoke;
-  border: none;
-  font-style: italic;
-  border-radius: 0.5rem;
+.controls {
+  display: inline-flex;
+  align-items: center;
+  margin: 10px 0px;
+  padding: 0.5px 50px;
+  border-radius: 8px;
+  color: #e7bf9dd0;
 }
 
-button:hover {
-  background-color: #e7c09d;
-  font-weight: 600;
-  box-shadow: 2px 2px 4px #e7bf9dd0;
+.controls .btnControls {
+  background-color: transparent;
+  border: 2px solid #e7bf9dd0;
+  font-weight: bold;
+  color: #e7bf9dd0;
+}
+
+.controls h3 {
+  margin-left: 10px;
+  margin-right: 10px;
 }

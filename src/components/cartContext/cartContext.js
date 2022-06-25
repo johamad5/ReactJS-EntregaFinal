@@ -4,18 +4,10 @@ const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-  const [unidades, setUnidades] = useState([]);
-
-  useEffect(() => {
-    let unidades = 0;
-    cart.forEach((articulo) => {
-      unidades += articulo.unidades;
-    });
-    setUnidades(unidades);
-  }, [cart]);
+  const [unidades, setUnidades] = useState(0);
 
   const addItem = (addProduc) => {
-    if (!cart.some((articulo) => articulo.id === addProduc.id)) {
+    if (!cart.some((art) => art.id === addProduc.id)) {
       setCart([...cart, addProduc]);
     }
   };
@@ -29,6 +21,14 @@ export const CartProvider = ({ children }) => {
     const cartProducts = [];
     setCart(cartProducts);
   };
+
+  useEffect(() => {
+    let unidades = 0;
+    cart.forEach((art) => {
+      unidades += art.unidades;
+    });
+    setUnidades(unidades);
+  }, [cart]);
 
   return (
     <CartContext.Provider

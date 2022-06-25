@@ -1,11 +1,16 @@
-import { Fragment } from "react";
-import "./cartWidget.css";
+import { useContext } from "react";
+import CartContext from "../cartContext/cartContext";
 
 const CartWidget = () => {
+  const { unidades } = useContext(CartContext);
+
+  const totalCart = unidades;
+
   return (
-    <Fragment>
-      <img src="./img/logo.png" alt="company logo" />
-    </Fragment>
+    <>
+      <img src="https://i.imgur.com/IuFGooX.png" alt="Carrito de compras" />
+      {totalCart}
+    </>
   );
 };
 

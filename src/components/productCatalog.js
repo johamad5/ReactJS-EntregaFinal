@@ -5,8 +5,7 @@ const products = [
     categoria: "Alfajores",
     descripcion:
       "Clásico alfajor con tapas de maicena, rellenos de dulce de leche y coco por los bordes.",
-    img: "./img/productImages/alfajorMaicena.jpg",
-    unidades: "1",
+    img: "https://i.imgur.com/n20vEwV.jpg",
     precio: 35,
     stock: 100,
   },
@@ -16,8 +15,7 @@ const products = [
     categoria: "Alfajores",
     descripcion:
       "Dos rebanadas de salchichón de chocolate como tapas, relleno de dulce de leche y bañado en chocolate",
-    img: "./img/productImages/alfajorSalchichon.jpg",
-    unidades: "1",
+    img: "https://i.imgur.com/nWdQCsM.jpg",
     precio: 45,
     stock: 100,
   },
@@ -27,8 +25,7 @@ const products = [
     categoria: "Tortas",
     descripcion:
       "Torta dulce con zanahoria rallada, nueces y pasas de uva, cubierto con un clásico frosting de queso crema.",
-    img: "./img/productImages/carrotCake.jpg",
-    unidades: "1",
+    img: "https://i.imgur.com/ev4OJ21.jpg",
     precio: 650,
     stock: 6,
   },
@@ -38,8 +35,7 @@ const products = [
     categoria: "Tortas",
     descripcion:
       "Tarta de limón con una base de masa quebrada y cubierta con merengue.",
-    img: "./img/productImages/lemonPie.jpg",
-    unidades: "1",
+    img: "https://i.imgur.com/YVYJXkF.jpg",
     precio: 720,
     stock: 6,
   },
@@ -49,8 +45,7 @@ const products = [
     categoria: "Tortas",
     descripcion:
       "Masa quebrada rellena de crema y decorada con una variedad de frutas.",
-    img: "./img/productImages/tartaFrutal.jpg",
-    unidades: "1",
+    img: "https://i.imgur.com/iA4tPNS.jpg",
     precio: 720,
     stock: 6,
   },
@@ -60,8 +55,7 @@ const products = [
     categoria: "Tortas",
     descripcion:
       "Se compone por una base de brownie clásico, cubierto por encima con una capa de dulce de leche y copos de merengue italiano.",
-    img: "./img/productImages/tortaBrownie.jpeg",
-    unidades: "1",
+    img: "https://i.imgur.com/opTqqRI.jpg",
     precio: 590,
     stock: 10,
   },
@@ -71,8 +65,7 @@ const products = [
     categoria: "Varios",
     descripcion:
       "Budín de masa esponjosa, húmedo y con un gran sabor y aroma a naranja, bañado por una fina capa de glaseado real",
-    img: "./img/productImages/budinDeNaranja.jpeg",
-    unidades: "1",
+    img: "https://i.imgur.com/Gthkc27.jpg",
     precio: 190,
     stock: 20,
   },
