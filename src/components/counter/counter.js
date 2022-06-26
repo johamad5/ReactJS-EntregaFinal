@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./counter.css";
 
-const Counter = ({ stock, onAdd }) => {
-  const [quantity, setQuantity] = useState(1);
+const Counter = ({ stock, initial, onAdd }) => {
+  const [quantity, setQuantity] = useState(initial);
 
   const decrement = () => {
     quantity > 0 && setQuantity((value) => value - 1);

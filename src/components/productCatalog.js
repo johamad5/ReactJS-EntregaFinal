@@ -7,6 +7,7 @@ const products = [
       "Clásico alfajor con tapas de maicena, rellenos de dulce de leche y coco por los bordes.",
     img: "https://i.imgur.com/n20vEwV.jpg",
     precio: 35,
+    unidades: 1,
     stock: 100,
   },
   {
@@ -17,6 +18,7 @@ const products = [
       "Dos rebanadas de salchichón de chocolate como tapas, relleno de dulce de leche y bañado en chocolate",
     img: "https://i.imgur.com/nWdQCsM.jpg",
     precio: 45,
+    unidades: 1,
     stock: 100,
   },
   {
@@ -27,6 +29,7 @@ const products = [
       "Torta dulce con zanahoria rallada, nueces y pasas de uva, cubierto con un clásico frosting de queso crema.",
     img: "https://i.imgur.com/ev4OJ21.jpg",
     precio: 650,
+    unidades: 1,
     stock: 6,
   },
   {
@@ -37,6 +40,7 @@ const products = [
       "Tarta de limón con una base de masa quebrada y cubierta con merengue.",
     img: "https://i.imgur.com/YVYJXkF.jpg",
     precio: 720,
+    unidades: 1,
     stock: 6,
   },
   {
@@ -47,6 +51,7 @@ const products = [
       "Masa quebrada rellena de crema y decorada con una variedad de frutas.",
     img: "https://i.imgur.com/iA4tPNS.jpg",
     precio: 720,
+    unidades: 1,
     stock: 6,
   },
   {
@@ -57,6 +62,7 @@ const products = [
       "Se compone por una base de brownie clásico, cubierto por encima con una capa de dulce de leche y copos de merengue italiano.",
     img: "https://i.imgur.com/opTqqRI.jpg",
     precio: 590,
+    unidades: 1,
     stock: 10,
   },
   {
@@ -67,6 +73,7 @@ const products = [
       "Budín de masa esponjosa, húmedo y con un gran sabor y aroma a naranja, bañado por una fina capa de glaseado real",
     img: "https://i.imgur.com/Gthkc27.jpg",
     precio: 190,
+    unidades: 1,
     stock: 20,
   },
 ];

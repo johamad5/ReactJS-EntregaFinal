@@ -2,16 +2,20 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getProductsById } from "../productCatalog";
 import ItemDetail from "../itemDetail/itemDetail";
+import { ddbb } from "../../services/firabase";
+import { getDoc, doc } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState();
   const { productId } = useParams();
 
   useEffect(() => {
-    getProductsById(productId).then((response) => {
-      setProduct(response);
+    const docRef = doc(ddbb, "products", productId);
+    getDoc(docRef).then((doc) => {
+      const specificProduct = { id: doc.id, ...doc.data() };
+      setProduct(specificProduct);
     });
-  }, []);
+  }, [productId]);
 
   return (
     <>

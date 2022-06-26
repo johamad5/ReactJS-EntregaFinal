@@ -6,7 +6,6 @@ const CartContainerList = ({ cart }) => {
     <table className="table">
       <thead>
         <tr>
-          <th scope="col">Img</th>
           <th scope="col">Nombre</th>
           <th scope="col">Unidades</th>
           <th scope="col">Precio</th>

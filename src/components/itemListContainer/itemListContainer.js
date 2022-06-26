@@ -1,40 +1,38 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./itemListContainer.css";
-import { getProducts, getProductsByCategory } from "../productCatalog";
 import ItemList from "../itemList/itemList";
+import { getDocs, collection, query, where } from "firebase/firestore";
+import { ddbb } from "../../services/firabase";
 
 const ItemListContainer = () => {
-  const [products, setProductos] = useState([]);
-  const [loading, setLoagind] = useState(true);
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
   const { categoryId } = useParams();
 
   useEffect(() => {
-    setLoagind(true);
+    setLoading(true);
 
-    if (!categoryId) {
-      getProducts()
-        .then((res) => {
-          setProductos(res);
-        })
-        .catch((error) => {
-          console.log(error);
-        })
-        .finally(() => {
-          setLoagind(false);
+    const productCollection = categoryId
+      ? query(
+          collection(ddbb, "products"),
+          where("categoria", "==", categoryId)
+        )
+      : collection(ddbb, "products");
+
+    getDocs(productCollection)
+      .then((resp) => {
+        const productsFirabase = resp.docs.map((elements) => {
+          return { id: elements.id, ...elements.data() };
         });
-    } else {
-      getProductsByCategory(categoryId)
-        .then((res) => {
-          setProductos(res);
-        })
-        .catch((error) => {
-          console.log(error);
-        })
-        .finally(() => {
-          setLoagind(false);
-        });
-    }
+        setProducts(productsFirabase);
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   }, [categoryId]);
 
   if (loading) {
