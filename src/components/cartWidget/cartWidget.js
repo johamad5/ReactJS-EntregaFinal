@@ -6,6 +6,13 @@ const CartWidget = () => {
   const { unidades } = useContext(CartContext);
 
   const totalCart = unidades;
+  if (totalCart === 0) {
+    return (
+      <Link to="/cart">
+        <img src="https://i.imgur.com/IuFGooX.png" alt="Carrito de compras" />
+      </Link>
+    );
+  }
 
   return (
     <Link to="/cart">

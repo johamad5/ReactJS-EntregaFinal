@@ -33,6 +33,9 @@ const CartContainer = () => {
       <button className="btnCC" onClick={deleteCart}>
         Vaciar carrito
       </button>
+      <Link className="btnCC" to="/">
+        Seguir comprando
+      </Link>
     </>
   );
 };

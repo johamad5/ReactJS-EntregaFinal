@@ -9,6 +9,10 @@ export const CartProvider = ({ children }) => {
   const addItem = (addProduc) => {
     if (!cart.some((art) => art.id === addProduc.id)) {
       setCart([...cart, addProduc]);
+    } else {
+      const artic = cart.find((art) => art.id === addProduc.id);
+      artic.quantity = artic.quantity + addProduc.quantity;
+      setCart([...cart]);
     }
   };
 
@@ -25,7 +29,7 @@ export const CartProvider = ({ children }) => {
   useEffect(() => {
     let unidades = 0;
     cart.forEach((art) => {
-      unidades += art.unidades;
+      unidades += art.quantity;
     });
     setUnidades(unidades);
   }, [cart]);

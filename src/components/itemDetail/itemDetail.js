@@ -24,7 +24,7 @@ const ItemDetail = ({ id, nombre, descripcion, img, precio, stock }) => {
       <p>$ {precio}</p>
 
       {aggregateUnits === 0 ? (
-        <Counter stock={stock} initial={0} onAdd={handleOnAdd} />
+        <Counter stock={stock} onAdd={handleOnAdd} />
       ) : (
         <Link to="/cart"> Ver carrito </Link>
       )}
