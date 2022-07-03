@@ -82,7 +82,7 @@ export const getProducts = () => {
   return new Promise((resolve, rej) => {
     setTimeout(() => {
       resolve(products);
-    }, 1500);
+    }, 5000);
   });
 };
 
@@ -90,7 +90,7 @@ export const getProductsById = (productId) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(products.find((prod) => prod.id === productId));
-    }, 500);
+    }, 5000);
   });
 };
 
@@ -98,6 +98,6 @@ export const getProductsByCategory = (categoryId) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(products.filter((resp) => resp.categoria === categoryId));
-    }, 500);
+    }, 5000);
   });
 };

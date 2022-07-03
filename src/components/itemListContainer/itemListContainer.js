@@ -3,12 +3,13 @@ import { useParams } from "react-router-dom";
 import "./itemListContainer.css";
 import ItemList from "../itemList/itemList";
 import { getDocs, collection, query, where } from "firebase/firestore";
-import { ddbb } from "../../services/firabase";
+import { ddbb } from "../../services/firebase";
+import { SpinnerCircularSplit } from "spinners-react";
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
   const { categoryId } = useParams();
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -36,7 +37,15 @@ const ItemListContainer = () => {
   }, [categoryId]);
 
   if (loading) {
-    return <h1> Cargando...</h1>;
+    return (
+      <SpinnerCircularSplit
+        size={85}
+        thickness={61}
+        speed={137}
+        color="rgba(243, 120, 12, 1)"
+        secondaryColor="rgba(217, 217, 217, 1)"
+      />
+    );
   }
 
   return (

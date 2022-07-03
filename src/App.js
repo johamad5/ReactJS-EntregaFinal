@@ -23,6 +23,10 @@ function App() {
               element={<ItemListContainer />}
             />
             <Route path="/cart" element={<CartContainer />} />
+            {
+              //<Route path="/checkout" element={<Checkout />} />
+              //formulario y logica de orden
+            }
           </Routes>
         </BrowserRouter>
       </CartProvider>
