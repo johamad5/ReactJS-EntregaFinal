@@ -1,0 +1,29 @@
+.colorful {
+  padding: 0.5rem 1rem;
+  background-color: #ffd0c5;
+  color: whitesmoke;
+  border: none;
+  font-style: italic;
+  border-radius: 0.5rem;
+}
+
+.colorful p {
+  margin: 0px 0px;
+}
+
+.colorful:hover {
+  background-color: whitesmoke;
+  box-shadow: 1px 1px 15px #ff9b96;
+  color: #ff9b96;
+}
+
+.transparent {
+  background-color: transparent;
+  border: 1.5px solid #ff9b96;
+  font-weight: bold;
+  color: #ff9b96;
+}
+
+.transparent:hover {
+  box-shadow: 2px 2px 4px #ff9b96;
+}

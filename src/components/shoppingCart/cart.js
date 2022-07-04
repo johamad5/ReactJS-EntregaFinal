@@ -1,5 +1,7 @@
 import { useContext } from "react";
+import "./cart.css";
 import cartContext from "../cartContext/cartContext";
+import StylishButton from "../buttons/stylishButton";
 
 const Cart = ({ id, nombre, precio, quantity }) => {
   const subTotal = precio * quantity;
@@ -10,12 +12,12 @@ const Cart = ({ id, nombre, precio, quantity }) => {
   };
 
   return (
-    <tr>
-      <td>{nombre}</td>
-      <td>X {quantity}</td>
-      <td> ${subTotal}</td>
-      <button onClick={deleteOne}>Quitar</button>
-    </tr>
+    <div className="cartCard">
+      <p>{nombre}</p>
+      <p>X {quantity}</p>
+      <p> ${subTotal}</p>
+      <StylishButton color="transparent" text="Quitar" func={deleteOne} />
+    </div>
   );
 };
 

@@ -1,6 +1,11 @@
 h1 {
   font-family: "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
     sans-serif;
-  color: #e7bf9dd0;
-  text-shadow: 1px 3px 4px #d9d9d9;
+  color: #ff7676;
+  text-shadow: 1px 3px 4px #ff9b96;
+  font-size: 46px;
+}
+
+.itemListContainer {
+  display: flex;
 }

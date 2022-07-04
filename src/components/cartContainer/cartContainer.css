@@ -1,14 +1,7 @@
-.btnCC {
-  padding: 0.5rem 1rem;
-  background-color: #e7bf9dd0;
-  color: whitesmoke;
-  border: none;
-  font-style: italic;
-  border-radius: 0.5rem;
-  margin-left: 10px;
+a {
+  text-decoration: none;
 }
 
-.btnCC:hover {
-  background-color: #e7c09d;
-  box-shadow: 2px 2px 4px #e7bf9dd0;
+.options button {
+  margin: 2rem 1rem;
 }

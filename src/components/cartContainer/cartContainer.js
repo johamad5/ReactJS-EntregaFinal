@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "./cartContainer.css";
 import CartContext from "../cartContext/cartContext";
+import StylishButton from "../buttons/stylishButton";
 import CartContainerList from "../cartContainerList/cartContainerList";
 import {
   addDoc,
@@ -101,13 +102,19 @@ const CartContainer = () => {
     <>
       <CartContainerList cart={cart} />
       <h3>Total: $ {total}</h3>
-      <button className="btnCC" onClick={purchaseProducts}>
-        Finalizar compra
-      </button>
-      <button className="btnCC" onClick={deleteCart}>
-        Vaciar carrito
-      </button>
-      <Link className="btnCC" to="/">
+      <div className="options">
+        <StylishButton
+          color="transparent"
+          text="Finalizar compra"
+          func={purchaseProducts}
+        />
+        <StylishButton
+          color="transparent"
+          text="Vaciar carrito"
+          func={deleteCart}
+        />
+      </div>
+      <Link className="colorful" to="/">
         Seguir comprando
       </Link>
     </>

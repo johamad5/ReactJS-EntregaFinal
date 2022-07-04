@@ -1,40 +1,16 @@
-import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./itemListContainer.css";
 import ItemList from "../itemList/itemList";
-import { getDocs, collection, query, where } from "firebase/firestore";
-import { ddbb } from "../../services/firebase";
 import { SpinnerCircularSplit } from "spinners-react";
+import { getProducts } from "../../services/firebase/firestore";
+import { useAsync } from "../hooks/useAsync";
 
 const ItemListContainer = () => {
-  const [products, setProducts] = useState([]);
   const { categoryId } = useParams();
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    setLoading(true);
-
-    const productCollection = categoryId
-      ? query(
-          collection(ddbb, "products"),
-          where("categoria", "==", categoryId)
-        )
-      : collection(ddbb, "products");
-
-    getDocs(productCollection)
-      .then((resp) => {
-        const productsFirabase = resp.docs.map((elements) => {
-          return { id: elements.id, ...elements.data() };
-        });
-        setProducts(productsFirabase);
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  }, [categoryId]);
+  const { error, data, loading } = useAsync(
+    () => getProducts(categoryId),
+    [categoryId]
+  );
 
   if (loading) {
     return (
@@ -48,16 +24,21 @@ const ItemListContainer = () => {
     );
   }
 
-  return (
-    <>
-      <h1>Ricco pasteleria.</h1>
+  if (error) {
+    return <h3>Hubo un error</h3>;
+  }
 
-      {products.length > 0 ? (
-        <ItemList products={products} />
+  return (
+    <div className="container">
+      <h1>Ricco pastelería</h1>
+      {data.length > 0 ? (
+        <ItemList products={data} />
       ) : (
-        <h3>No tenemos productos disponibles por el momento :/</h3>
+        <div>
+          <h3>No tenemos productos disponibles por el momento :/</h3>
+        </div>
       )}
-    </>
+    </div>
   );
 };
 

@@ -4,17 +4,14 @@
   margin: 10px 0px;
   padding: 0.5px 50px;
   border-radius: 8px;
-  color: #e7bf9dd0;
-}
-
-.controls .btnControls {
-  background-color: transparent;
-  border: 2px solid #e7bf9dd0;
-  font-weight: bold;
-  color: #e7bf9dd0;
+  color: #ff7676;
 }
 
 .controls h3 {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.controls button {
+  padding: 0rem 1rem;
 }

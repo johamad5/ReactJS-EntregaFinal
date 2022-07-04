@@ -17,18 +17,24 @@ const ItemDetail = ({ id, nombre, descripcion, img, precio, stock }) => {
   };
 
   return (
-    <>
-      <h1>{nombre}</h1>
-      <img src={img} alt="product" className="imgDetail" />
-      <h4>{descripcion}</h4>
-      <p>$ {precio}</p>
+    <div className="container">
+      <div className="detailSection">
+        <h1 className="name">{nombre}</h1>
+        <img className="imgProduct" src={img} alt="product" />
+        <h4 className="description">{descripcion}</h4>
+        <p className="price">$ {precio}</p>
 
-      {aggregateUnits === 0 ? (
-        <Counter stock={stock} onAdd={handleOnAdd} />
-      ) : (
-        <Link to="/cart"> Ver carrito </Link>
-      )}
-    </>
+        <span className="btnOption">
+          {aggregateUnits === 0 ? (
+            <Counter stock={stock} onAdd={handleOnAdd} />
+          ) : (
+            <Link to="/cart">
+              <span className="transparent">Ver carrito </span>
+            </Link>
+          )}
+        </span>
+      </div>
+    </div>
   );
 };
 

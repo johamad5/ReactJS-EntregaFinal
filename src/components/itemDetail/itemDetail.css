@@ -1,14 +1,44 @@
-button {
-  padding: 0.5rem 1rem;
-  background-color: #e7bf9dd0;
-  color: whitesmoke;
-  border: none;
-  font-style: italic;
-  border-radius: 0.5rem;
+.container {
+  width: 80%;
+  margin: auto auto;
 }
 
-button:hover {
-  background-color: #e7c09d;
-  font-weight: 600;
-  box-shadow: 2px 2px 4px #e7bf9dd0;
+.detailSection {
+  margin-top: 6rem;
+  display: grid;
+  grid-template-columns: 40% 5% 55%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+.name {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+
+.imgProduct {
+  grid-column: 1/2;
+  grid-row: 1/6;
+}
+
+.description {
+  text-align: left;
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+
+.price {
+  text-align: left;
+  grid-column: 3/4;
+  grid-row: 3/4;
+}
+
+.btnOption {
+  text-align: left;
+  margin: 0px 0px;
+  grid-column: 3/4;
+  grid-row: 4/5;
+}
+
+span {
+  padding: 0.5rem 1rem;
 }
