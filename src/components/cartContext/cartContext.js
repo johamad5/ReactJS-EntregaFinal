@@ -16,6 +16,14 @@ export const CartProvider = ({ children }) => {
     }
   };
 
+  const lessUnits = (productId) => {
+    const artic = cart.find((art) => art.id === productId);
+    if (artic.quantity > 1) {
+      artic.quantity--;
+      setCart([...cart]);
+    }
+  };
+
   const deleteItem = (id) => {
     const cartProducts = cart.filter((product) => product.id !== id);
     setCart(cartProducts);
@@ -46,6 +54,7 @@ export const CartProvider = ({ children }) => {
     <CartContext.Provider
       value={{
         cart,
+        lessUnits,
         addItem,
         deleteItem,
         deleteCart,
