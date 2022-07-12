@@ -88,6 +88,7 @@ const Checkout = () => {
         nombre: data.name + " " + data.surname,
         telefono: data.phone,
         email: data.mail,
+        state: "Generada",
       },
       fecha: fecha,
       customerCart: cart,
