@@ -8,4 +8,9 @@
   display: flex;
   text-align: center;
   justify-content: space-around;
+  align-items: center;
+}
+
+.cartCard p {
+  margin: 0rem 1.5rem;
 }

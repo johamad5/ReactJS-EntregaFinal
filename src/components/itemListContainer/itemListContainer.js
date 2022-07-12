@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import "./itemListContainer.css";
 import ItemList from "../itemList/itemList";
-import { SpinnerCircularSplit } from "spinners-react";
+import Spinner from "../Spinner/spinner";
 import { getProducts } from "../../services/firebase/firestore";
 import { useAsync } from "../hooks/useAsync";
 
@@ -13,15 +13,7 @@ const ItemListContainer = () => {
   );
 
   if (loading) {
-    return (
-      <SpinnerCircularSplit
-        size={85}
-        thickness={61}
-        speed={137}
-        color="rgba(243, 120, 12, 1)"
-        secondaryColor="rgba(217, 217, 217, 1)"
-      />
-    );
+    return <Spinner text="cargando..." />;
   }
 
   if (error) {

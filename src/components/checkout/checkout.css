@@ -1,0 +1,24 @@
+.inputForm {
+  display: block;
+  outline: none;
+  background: none;
+  border: none;
+  width: 15rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ff9b96;
+  margin: 2rem auto;
+}
+
+.inputForm:focus {
+  border-bottom: 2px solid #ff7676;
+}
+
+.errorMessage {
+  color: red;
+  font-size: small;
+  margin-top: 0rem;
+}
+
+.btnForm a {
+  padding: 0.7rem 1.5rem;
+}

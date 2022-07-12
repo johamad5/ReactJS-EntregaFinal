@@ -12,16 +12,16 @@ const NavBar = () => {
           alt="Company logo"
         />
       </Link>
-      <NavLink to="/category/Tortas" activeClassName="active">
+      <NavLink to="/category/Tortas" activeclassname="active">
         TORTAS
       </NavLink>
-      <NavLink to="/category/Alfajores" activeClassName="active">
+      <NavLink to="/category/Alfajores" activeclassname="active">
         ALFAJORES
       </NavLink>
-      <NavLink to="/category/DesayunosMeriendas" activeClassName="active">
+      <NavLink to="/category/DesayunosMeriendas" activeclassname="active">
         DESAYUNOS Y MERIENDAS
       </NavLink>
-      <NavLink to="/category/Varios" activeClassName="active">
+      <NavLink to="/category/Varios" activeclassname="active">
         VARIOS
       </NavLink>
       <CartWidget />

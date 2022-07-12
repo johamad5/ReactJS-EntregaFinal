@@ -2,6 +2,24 @@ a {
   text-decoration: none;
 }
 
-.options button {
+button {
   margin: 2rem 1rem;
+}
+
+.cartContainer {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.continue {
+  margin-left: 1rem;
+  padding: 1rem 1.5rem;
+}
+
+.options a {
+  margin: 1rem 1rem;
+  padding: 1rem 1.5rem;
 }
