@@ -9,9 +9,6 @@ const ItemDetail = ({ id, nombre, descripcion, img, precio, stock }) => {
   const [aggregateUnits, setAggregateUnits] = useState(0);
 
   const handleOnAdd = (quantity) => {
-    console.log(
-      `se agregaron ${quantity} de ${nombre} con identificador ${id}`
-    );
     addItem({ id, img, nombre, quantity, precio });
     setAggregateUnits(quantity);
   };
@@ -28,9 +25,14 @@ const ItemDetail = ({ id, nombre, descripcion, img, precio, stock }) => {
           {aggregateUnits === 0 ? (
             <Counter stock={stock} onAdd={handleOnAdd} />
           ) : (
-            <Link to="/cart">
-              <span className="transparent">Ver carrito </span>
-            </Link>
+            <>
+              <Link to="/cart">
+                <span className="transparent">Ver carrito </span>
+              </Link>
+              <Link to="/">
+                <span className="transparent">Seguir comprando </span>
+              </Link>
+            </>
           )}
         </span>
       </div>

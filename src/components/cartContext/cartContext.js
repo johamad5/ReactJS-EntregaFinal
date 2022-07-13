@@ -1,4 +1,5 @@
 import { useState, useEffect, createContext } from "react";
+import Swal from "sweetalert2";
 
 const CartContext = createContext();
 
@@ -14,6 +15,23 @@ export const CartProvider = ({ children }) => {
       artic.quantity = artic.quantity + addProduc.quantity;
       setCart([...cart]);
     }
+
+    const notificacion = Swal.mixin({
+      toast: true,
+      position: "center-end",
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: false,
+      didOpen: (toast) => {
+        toast.addEventListener("mouseenter", Swal.stopTimer);
+        toast.addEventListener("mouseleave", Swal.resumeTimer);
+      },
+    });
+
+    notificacion.fire({
+      icon: "info",
+      title: `Producto agregado al carrito`,
+    });
   };
 
   const lessUnits = (productId) => {
@@ -21,12 +39,47 @@ export const CartProvider = ({ children }) => {
     if (artic.quantity > 1) {
       artic.quantity--;
       setCart([...cart]);
+
+      const notificacion = Swal.mixin({
+        toast: true,
+        position: "bottom-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener("mouseenter", Swal.stopTimer);
+          toast.addEventListener("mouseleave", Swal.resumeTimer);
+        },
+      });
+
+      notificacion.fire({
+        icon: "info",
+        title: `Se quitó una unidad de: ${artic.nombre}`,
+      });
     }
   };
 
   const deleteItem = (id) => {
     const cartProducts = cart.filter((product) => product.id !== id);
+    const products = cart.find((product) => product.id === id);
     setCart(cartProducts);
+
+    const notificacion = Swal.mixin({
+      toast: true,
+      position: "bottom-end",
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener("mouseenter", Swal.stopTimer);
+        toast.addEventListener("mouseleave", Swal.resumeTimer);
+      },
+    });
+
+    notificacion.fire({
+      icon: "warning",
+      title: `Se eliminó el producto: ${products.nombre}`,
+    });
   };
 
   const deleteCart = () => {

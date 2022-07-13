@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import StylishButton from "../buttons/stylishButton";
 import Spinner from "../Spinner/spinner";
+import Swal from "sweetalert2";
 import CartContext from "../cartContext/cartContext";
 import "./checkout.css";
 import {
@@ -59,6 +60,12 @@ const Checkout = () => {
         setLoading(false);
         console.log(`Su orden se genero correctamente, su ID es ${id}`);
 
+        Swal.fire({
+          icon: "warning",
+          title: `<h1>Orden generada!</h1>`,
+          html: `Hola <b>${thisOrder.customer.nombre}</b>, <br>tu orden posee la ID:<b> ${id}</b>. <br> Guarda este código ya que será solicitado al momento de realizar el retiro.`,
+          footer: "<h2>Gracias por elegirnos</h2>",
+        });
         setTimeout(() => {
           navigate("/");
         }, 2000);
