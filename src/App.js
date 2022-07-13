@@ -24,7 +24,7 @@ function App() {
               element={<ItemListContainer />}
             />
             <Route path="/cart" element={<CartContainer />} />
-            {<Route path="/checkout" element={<Checkout />} />}
+            <Route path="/checkout" element={<Checkout />} />
           </Routes>
         </BrowserRouter>
       </CartProvider>

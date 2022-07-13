@@ -125,16 +125,16 @@ const Checkout = () => {
           })}
         />
         {errors.name?.type === "required" && (
-          <p className="errorMessage">Campo obligatorio</p>
+          <p className="errorMessage"> ⚠ Campo obligatorio</p>
         )}
         {errors.name?.type === "minLength" && (
           <p className="errorMessage">
-            El nombre no puede tener menos de 2 caracteres
+            ⚠ El nombre no puede tener menos de 2 caracteres
           </p>
         )}
         {errors.name?.type === "maxLength" && (
           <p className="errorMessage">
-            El nombre no puede tener más de 20 caracteres
+            ⚠ El nombre no puede tener más de 20 caracteres
           </p>
         )}
         <input
@@ -149,16 +149,16 @@ const Checkout = () => {
           })}
         />
         {errors.surname?.type === "required" && (
-          <p className="errorMessage">Campo obligatorio</p>
+          <p className="errorMessage">⚠ Campo obligatorio</p>
         )}
         {errors.surname?.type === "minLength" && (
           <p className="errorMessage">
-            El apellido no puede tener menos de 2 caracteres
+            ⚠ El apellido no puede tener menos de 2 caracteres
           </p>
         )}
         {errors.surname?.type === "maxLength" && (
           <p className="errorMessage">
-            El apellido no puede tener más de 20 caracteres
+            ⚠ El apellido no puede tener más de 20 caracteres
           </p>
         )}
         <input
@@ -173,16 +173,16 @@ const Checkout = () => {
           })}
         />
         {errors.phone?.type === "required" && (
-          <p className="errorMessage">Campo obligatorio</p>
+          <p className="errorMessage">⚠ Campo obligatorio</p>
         )}
         {errors.phone?.type === "minLength" && (
           <p className="errorMessage">
-            El número no puede tener menos de 8 caracteres
+            ⚠ El número no puede tener menos de 8 caracteres
           </p>
         )}
         {errors.phone?.type === "maxLength" && (
           <p className="errorMessage">
-            El número no puede tener más de 9 caracteres
+            ⚠ El número no puede tener más de 9 caracteres
           </p>
         )}
         <input
@@ -196,10 +196,10 @@ const Checkout = () => {
           })}
         />
         {errors.mail?.type === "required" && (
-          <p className="errorMessage">Campo obligatorio</p>
+          <p className="errorMessage">⚠ Campo obligatorio</p>
         )}
         {errors.mail?.type === "patern" && (
-          <p className="errorMessage">Formato de email no válido</p>
+          <p className="errorMessage">⚠ Formato de email no válido</p>
         )}
         <div className="btnForm">
           <StylishButton
