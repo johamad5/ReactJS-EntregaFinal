@@ -15,7 +15,7 @@ Desde aquí es posible visualizar los diferentes productos a la venta, una descr
 
 https://user-images.githubusercontent.com/98429353/178860779-75f5f19d-0958-4ecc-af3d-437adcb7662d.mp4
 
-## Run Locally
+## Comandos para ejecutar localmente el proyecto
 
 Clona el repo
 
@@ -26,7 +26,7 @@ Clona el repo
 Ve al directorio del proyecto
 
 ```bash
-  cd Desafios-ReactJS-main 
+  cd ReactJS-EntregaFinal
 ```
 
 Instala las dependencias necesarias
@@ -47,7 +47,7 @@ Inicia el servidor
 Para correr el proyecto, ve a [.evn.example](https://github.com/johamad5/ReactJS-EntregaFinal/blob/main/.env.example)
  
 
-## Authors
+## Autor
 
 👩‍💻 [@johamad5](https://github.com/johamad5)
 
